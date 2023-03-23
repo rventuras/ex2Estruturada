@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+#include <stdlib.h>
+int main(void) {
+  setlocale(LC_ALL,"portuguese");
+  float x, y;
+  char op;
+
+  printf ("Escolha uma operação\n");
+  printf ("* para multiplicação\n/ para divisão\n+ para soma\n - para subtração\n");
+  scanf ("%c", &op);
+  system ("cls");
+
+  switch (op){
+    case '*': 
+    printf ("Você escolheu multiplicação!\n");
+    printf ("Insira dois valores: ");
+    scanf ("%f%f", &x, &y);
+    printf ("A resposta é %.1f", x * y);
+    break;
+
+    case '/':
+    printf ("Você escolheu divisão!\n");
+    printf ("Insira dois valores: ");
+    scanf ("%f%f", &x, &y);
+    printf ("A resposta é %.1f", x / y);
+    break;
+
+    case '+':
+    printf ("Você escolheu soma!\n");
+    printf ("Insira dois valores: ");
+    scanf ("%f%f", &x, &y);
+    printf ("A resposta é %.1f", x + y);
+    break;
+
+    case '-':
+    printf ("Você escolheu subtração!\n");
+    printf ("Insira dois valores: ");
+    scanf ("%f%f", &x, &y);
+    printf ("A resposta é %.1f", x - y);
+    break;
+
+    default:
+    printf ("Operação inválida!");
+    break;
+  }
+  
+  
+
+  return 0;
+}
