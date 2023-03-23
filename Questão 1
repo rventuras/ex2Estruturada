@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+int main(void) {
+  setlocale(LC_ALL,"portuguese");
+  float n, q, r;
+  printf("Insira um valor: ");
+  scanf ("%f", &n);
+  
+  if (n > 0){
+    printf ("A raiz quadrada é %.f\n", sqrt(n));
+    printf ("A potência é %.f", pow(n, 2));
+  }
+  else{
+    printf ("Número inválido!");
+  }
+
+  return 0;
+}
