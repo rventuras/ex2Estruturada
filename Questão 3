@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+#include <stdlib.h>
+int main(void) {
+  setlocale(LC_ALL,"portuguese");
+  int ddd;
+  printf ("Informe o DDD em questão: ");
+  scanf ("%i", &ddd);
+
+  switch (ddd){
+    case 61: 
+    printf ("Esse DDD é de Brasília!");
+    break;
+    
+    case 71: 
+    printf ("Esse DDD é de Salvador!");
+    break;
+    
+    case 11:
+    printf ("Esse DDD é de São Paulo!");
+    break;
+
+    case 21:
+    printf ("Esse DDD é de Rio de Janeiro!");
+    break;
+
+    case 32:
+    printf ("Esse DDD é de Juiz de Fora!");
+    break;
+    
+    case 19: 
+    printf ("Esse DDD é de Campinas!");
+    break;
+
+    case 27:
+    printf ("Esse DDD é de Vitória");
+    break;
+
+    case 31:
+    printf ("Esse DDD é de Belo Horizonte!");
+    break;
+    
+    default:
+    printf ("DDD inválido!");
+    break;
+  }
+  
+  
+
+  return 0;
+}
