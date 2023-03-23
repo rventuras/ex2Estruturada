@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+#include <stdlib.h>
+
+int main() {
+    double valor;
+    int notas[6] = {0, 0, 0, 0, 0, 0};
+    int moedas[6] = {0, 0, 0, 0, 0, 0};
+    int notas_value[6] = {100, 50, 20, 10, 5, 2};
+    double moedas_value[6] = {1.0, 0.50, 0.25, 0.10, 0.05, 0.01};
+
+  printf ("Insira um valor em reais:");
+    scanf("%lf", &valor);
+
+    int valor_centavos = valor * 100;
+
+    printf("NOTAS:\n");
+
+    for(int i = 0; i < 6; i++) {
+        notas[i] = valor_centavos / (notas_value[i] * 100);
+        valor_centavos -= notas[i] * notas_value[i] * 100;
+
+        printf("%d nota(s) de R$ %d.00\n", notas[i], notas_value[i]);
+    }
+
+    printf("MOEDAS:\n");
+
+    for(int i = 0; i < 6; i++) {
+        moedas[i] = valor_centavos / (moedas_value[i] * 100);
+        valor_centavos -= moedas[i] * moedas_value[i] * 100;
+
+        printf("%d moeda(s) de R$ %.2lf\n", moedas[i], moedas_value[i]);
+    }
+
+    return 0;
+}
