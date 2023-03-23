@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+#include <stdlib.h>
+int main(void) {
+  setlocale(LC_ALL,"portuguese");
+  float valor, percent;
+  char estado[2];
+
+  printf ("Insira o valor do produto: ");
+  scanf ("%f", &valor);
+  printf ("Insira o valor do imposto: ");
+  scanf ("%f", &percent);
+  printf ("Insira o estado: ");
+  scanf ("%s", &estado);
+
+  system ("cls");
+
+  printf ("Seu estado é %s e o valor final do produto é %.2f", estado, valor + (valor * (percent/100)));
+  
+  
+
+  return 0;
+}
