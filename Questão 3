@@ -2,7 +2,7 @@
 #include <math.h>
 #include <locale.h>
 #include <stdlib.h>
-int main(void) {
+int main() {
   setlocale(LC_ALL,"portuguese");
   int ddd;
   printf ("Informe o DDD em questão: ");
