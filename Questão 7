@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+
+int main() {
+  setlocale(LC_ALL,"portuguese");
+  float qntd;
+  int lanche;
+  printf("Escolha seu lanche!\n");
+  printf (" _______________________________\n");
+  printf ("|______________________________|\n");
+  printf ("|100 - Cachorro quente| R$10,10|\n");
+  printf ("|101 - Bauru simples  | R$8,30 |\n");
+  printf ("|102 - Bauru c/ovo    | R$8,50 |\n");
+  printf ("|103 - Hamburguer     | R$12,50|\n");
+  printf ("|104 - cheeseburguer  | R$13,25|\n");
+  printf ("|______________________________|\n");
+  scanf ("%i", &lanche);
+  
+  printf ("Quantos deseja? ");
+  scanf ("%f", &qntd);
+  system ("cls");
+  switch (lanche){
+    case 100:
+    printf ("O valor total do seu cachorro quente é de R$%.2f", 10.10 * qntd );
+    break;
+
+    case 101:
+    printf ("O valor total do seu bauru simples é de R$%.2f", 8.30 * qntd );
+    break;
+
+    case 102:
+    printf ("O valor total do seu bauru c/ovo é de R$%.2f", 8.50 * qntd );
+    break;
+
+    case 103:
+    printf ("O valor total do seu hamburguer é de R$%.2f", 12.50 * qntd );
+    break;
+
+    case 104:
+    printf ("O valor total do seu cheeseburguer é de R$%.2f", 13.25 * qntd );
+    break;
+  }
+  return 0;
+}
